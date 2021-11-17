@@ -241,8 +241,8 @@ class BoundingBox:
     def get_area(self):
         assert (self._x2 > self._x)
         assert (self._y2 > self._y)
-        assert isclose(self._w * self._h, (self._x2 - self._x)
-                       * (self._y2 - self._y))
+        assert (isclose(self._w * self._h, (self._x2 - self._x) * (self._y2 - self._y))), \
+               f'w={self._w}, h={self._h}, x={self._x}, x2={self._x2}, y={self._y}, y2={self._y2}'
         return (self._x2 - self._x + 1) * (self._y2 - self._y + 1)
 
     def get_coordinates_type(self):
