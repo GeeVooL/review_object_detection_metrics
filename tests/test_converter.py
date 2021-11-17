@@ -1,9 +1,9 @@
 import os
 
-import src.utils.converter as converter
-import src.utils.general_utils as general_utils
-import src.utils.validations as validations
-from src.utils.enumerators import BBFormat, BBType, CoordinatesType
+import metrics.utils.converter as converter
+import metrics.utils.general_utils as general_utils
+import metrics.utils.validations as validations
+from metrics.utils.enumerators import BBFormat, BBType, CoordinatesType
 
 
 def test_converters_gts():

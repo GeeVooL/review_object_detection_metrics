@@ -1,14 +1,11 @@
+## Changes from origin
 
+I introduced some modifications to make using this code from other scripts possible:
 
-<p align="left">
-  
-<a>[![Build Status](https://travis-ci.com/rafaelpadilla/review_object_detection_metrics.svg?branch=main)](https://travis-ci.com/rafaelpadilla/review_object_detection_metrics)</a>
-<a href="https://github.com/rafaelpadilla/review_object_detection_metrics/raw/main/published_paper.pdf">
-    <img src="https://img.shields.io/badge/paper-published-blue"/></a>
-<a><img src="https://img.shields.io/badge/version-0.1-orange"/></a>
-<a href="https://doi.org/10.3390/electronics10030279">
-    <img src="https://img.shields.io/badge/DOI-10.3390%2Felectronics10030279-gray"/></a>
-</p>
+- Removed redundant files
+- Rename 'src' to 'metrics'
+- Remove UI dependencies
+- Run autopep8 on remaining files
 
 ## Citation
 
@@ -314,7 +311,7 @@ See [example annotation](https://github.com/rafaelpadilla/review_object_detectio
 ##### Running  
 
 ```python
-from src.evaluators.tube_evaluator import TubeEvaluator
+from metrics.evaluators.tube_evaluator import TubeEvaluator
 
 tube_evaluator = TubeEvaluator(annot_filepath, preds_filepath)
 res, mAP = tube_evaluator.evaluate(thr=0.5)
